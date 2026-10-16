@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#09142e">
+<meta name="description" content="Стас и Даша. Свадебная книга историй, тёплых слов и маленьких приключений.">
+<title>Стас &amp; Даша — Книга судеб</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+
+<body>
+
+<div class="atmosphere" aria-hidden="true"></div>
+<div class="starfield" aria-hidden="true"></div>
+<div class="starfield stars-decor" aria-hidden="true">
+  <span class="sparkle sparkle-1">✦</span><span class="sparkle sparkle-2">✧</span>
+  <span class="sparkle sparkle-3">✦</span><span class="sparkle sparkle-4">✧</span>
+  <span class="sparkle sparkle-5">✶</span><span class="sparkle sparkle-6">✧</span>
+  <span class="sparkle sparkle-7">✦</span><span class="sparkle sparkle-8">✧</span>
+</div>
+
+<header class="topbar">
+  <div class="brand" aria-label="Книга Судеб. Стас и Даша">
+    <div class="brand-mark" aria-hidden="true"><span>✦</span></div>
+    <div class="brand-name">
+      Книга Судеб
+      <small>Стас & Даша · 16 октября</small>
+    </div>
+  </div>
+
+  <div class="top-actions">
+    <button class="chrome-btn" id="fullscreenBtn" type="button"
+            title="Полноэкранный режим">
+      На весь экран
+    </button>
+    <button class="chrome-btn" id="contentsBtn" type="button"
+            aria-haspopup="dialog" aria-controls="contentsDialog">
+      Содержание
+    </button>
+  </div>
+</header>
+
+<main class="stage" id="stage" aria-label="Свадебная книга">
+  <div class="book" id="book"></div>
+</main>
+
+<footer class="footer">
+  <div class="footer-note">Листайте историю · ← → · пробел</div>
+
+  <nav class="navigation" aria-label="Перелистывание книги">
+    <button class="nav-btn" id="prevBtn" type="button" aria-label="Предыдущая страница">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M15 5 8 12l7 7"/>
+      </svg>
+    </button>
+    <div class="page-counter" id="counter">01 / 01</div>
+    <button class="nav-btn" id="nextBtn" type="button" aria-label="Следующая страница">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="m9 5 7 7-7 7"/>
+      </svg>
+    </button>
+  </nav>
+
+  <div class="footer-chapter" id="chapterLabel"></div>
+</footer>
+
+<div class="progress" aria-hidden="true"><span id="progressFill"></span></div>
+<div class="sr-only" id="announcement" role="status" aria-live="polite"></div>
+<div id="notice" role="status" hidden></div>
+
+<dialog id="contentsDialog" aria-labelledby="contentsTitle">
+  <div class="dialog-content">
+    <button class="close-dialog" type="button" data-close aria-label="Закрыть содержание">×</button>
+    <div class="eyebrow">Сначала знакомимся, затем играем, в конце загадываем будущее</div>
+    <h2 class="dialog-title" id="contentsTitle">Оглавление</h2>
+    <ol class="toc" id="toc"></ol>
+    <p class="small" style="margin:22px 0 0">
+      Главы идут по порядку. Нажмите на название, чтобы перейти к нужной части; все вопросы внутри главы открываются последовательно.
+    </p>
+  </div>
+</dialog>
+
+<dialog id="cardDialog" aria-labelledby="cardTitle">
+  <div class="dialog-content" id="cardContent"></div>
+</dialog>
+
+<noscript>
+  <div class="noscript">
+    Чтобы перелистывать книгу и открывать ответы, включите JavaScript.
+    Интернет для работы презентации не требуется.
+  </div>
+</noscript>
+
+
+
+
+
+<canvas id="starfall" aria-label="Интерактивный звёздный фон"></canvas>
+
+\n
+<script src="js/app.js" defer></script>
+<script src="js/starfield.js" defer></script>
+</body>
+</html>
